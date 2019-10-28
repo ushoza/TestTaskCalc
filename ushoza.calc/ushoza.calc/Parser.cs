@@ -6,6 +6,9 @@ using ushoza.calc.Exceptions;
 
 namespace ushoza.calc
 {
+    /// <summary>
+    /// Разбирает строку выражения и преобразует в список Tokens
+    /// </summary>
     public class Parser
     {
         public virtual IScanner CreateGrammar()
