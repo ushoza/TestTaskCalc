@@ -5,6 +5,9 @@ using System.Text;
 using ushoza.calc.Exceptions;
 namespace ushoza.calc
 {
+    /// <summary>
+    /// Грамматика для простейшего парсера математических выражений
+    /// </summary>
     public class DefaultGrammar : IScanner
     {
         public virtual Token GetToken(string expression)

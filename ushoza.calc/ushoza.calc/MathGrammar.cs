@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ushoza.calc
 {
+    /// <summary>
+    /// Грамматика для математиечского парсера
+    /// </summary>
     public class MathGrammar : DefaultGrammar
     {
 

@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ushoza.calc
 {
+    /// <summary>
+    /// Интерфейс парсера
+    /// </summary>
     public interface IScanner
     {
         Token GetToken(string expression);

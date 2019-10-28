@@ -6,6 +6,9 @@ using ushoza.calc.Exceptions;
 
 namespace ushoza.calc
 {
+    /// <summary>
+    /// Калькулятор (ариметическое логическое устройство)
+    /// </summary>
     public class Alu
     {
 

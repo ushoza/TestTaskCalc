@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Alu.cs" />
     <Compile Include="DefaultGrammar.cs" />
-    <Compile Include="DefaultStrategy.cs" />
     <Compile Include="Exceptions\CalcBadSyntaxException.cs" />
     <Compile Include="Exceptions\CalcException.cs" />
     <Compile Include="IScanner.cs" />
