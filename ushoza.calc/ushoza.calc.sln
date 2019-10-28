@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ushoza.calc", "ushoza.calc\ushoza.calc.csproj", "{321ECE8C-AE46-45CE-87A5-6BBDA0CAE66D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectForFeatureVertInt", "Шаблон тестового проекта Nunit для vs 2019\TestProjectForFeatureVertInt.csproj", "{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorConsole", "CalculatorConsole\CalculatorConsole.csproj", "{A30A3365-305C-41A2-A678-327D57F795AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectForFeatureVertInt", "TestProject\TestProjectForFeatureVertInt.csproj", "{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{321ECE8C-AE46-45CE-87A5-6BBDA0CAE66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{321ECE8C-AE46-45CE-87A5-6BBDA0CAE66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{321ECE8C-AE46-45CE-87A5-6BBDA0CAE66D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A30A3365-305C-41A2-A678-327D57F795AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A30A3365-305C-41A2-A678-327D57F795AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A30A3365-305C-41A2-A678-327D57F795AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A30A3365-305C-41A2-A678-327D57F795AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A1633A-2CCF-4979-B737-D0EB50E1EDD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,6 +27,20 @@ namespace ushoza.calc.test
         }
 
         [Test]
+        public void TestCalSimpleExpressionDecimal()
+        {
+            List<Token> source = new List<Token>() { new TokenOperand() { Value = "2.2"},
+                                                     new TokenOperation () { Value ="+"},
+                                                     new TokenOperand() { Value = "2.3"}
+                                                   };
+            Alu alu = new Alu();
+            decimal actual = alu.Calc(source);
+            decimal expected = 4.5M;
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [Test]
         public void TestCalcComplexExpression()
         {
 

@@ -78,3 +78,29 @@ D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\Шаблон тест
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.csproj.CopyComplete
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.exe
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.pdb
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\NUnit3.TestAdapter.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\NUnit3.TestAdapter.pdb
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\nunit.engine.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\nunit.engine.api.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\Mono.Cecil.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\TestProjectForFeatureVertInt.exe.config
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\TestProjectForFeatureVertInt.exe
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\TestProjectForFeatureVertInt.pdb
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\nunit-console-runner.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\nunit.core.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\nunit.core.interfaces.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\nunit.framework.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\nunit.util.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\ushoza.calc.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\ushoza.calc.pdb
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.csprojAssemblyReference.cache
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\Interop.MSXML2.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\Interop.TreeModelOCX.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\Interop.v2DobjLib.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\Interop.Vertical.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\Interop.XMLClasses.dll
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.csproj.ResolveComReference.cache
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.csproj.CoreCompileInputs.cache
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.csproj.CopyComplete
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.exe
+D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.pdb
