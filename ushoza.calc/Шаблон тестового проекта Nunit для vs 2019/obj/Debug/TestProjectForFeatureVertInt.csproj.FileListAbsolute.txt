@@ -1,0 +1,54 @@
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\TestProjectForFeatureVertInt.csprojAssemblyReference.cache
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.BOSimple.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.MSXML2.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.SomePlugins.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.TechFormOCX.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.TreeModelOCX.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.UniReference.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.v2DobjLib.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.Vertical.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.vkernelLib.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\Interop.XMLClasses.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\TestProjectForFeatureVertInt.csproj.ResolveComReference.cache
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\TestProjectForFeatureVertInt.csproj.CoreCompileInputs.cache
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\TestProjectForFeatureVertInt.exe.config
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\TestProjectForFeatureVertInt.exe
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\TestProjectForFeatureVertInt.pdb
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\FeatureCamInegration.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\nunit.framework.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\FeatureCamInegration.pdb
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\TestProjectForFeatureVertInt.csproj.CopyComplete
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\TestProjectForFeatureVertInt.exe
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\obj\Debug\TestProjectForFeatureVertInt.pdb
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\nunit-console-runner.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\nunit.core.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\nunit.core.interfaces.dll
+D:\Vertical\МАЯК\FeatureCamIntegration\FeatureCamInegration\TestProjectForFeatureVertInt\bin\Debug\nunit.util.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\NUnit3.TestAdapter.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\NUnit3.TestAdapter.pdb
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\nunit.engine.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\nunit.engine.api.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\Mono.Cecil.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\TestProjectForFeatureVertInt.exe.config
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\TestProjectForFeatureVertInt.exe
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\TestProjectForFeatureVertInt.pdb
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\nunit-console-runner.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\nunit.core.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\nunit.core.interfaces.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\nunit.framework.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\nunit.util.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\ushoza.calc.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\ushoza.calc.pdb
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.csprojAssemblyReference.cache
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\Interop.MSXML2.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\Interop.TreeModelOCX.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\Interop.v2DobjLib.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\Interop.Vertical.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\Interop.XMLClasses.dll
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.csproj.ResolveComReference.cache
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.csproj.CoreCompileInputs.cache
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.csproj.CopyComplete
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.exe
+D:\WORK\TZ_Calculator\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\obj\Debug\TestProjectForFeatureVertInt.pdb
