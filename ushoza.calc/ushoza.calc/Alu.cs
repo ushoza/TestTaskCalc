@@ -12,7 +12,7 @@ namespace ushoza.calc
     public class Alu
     {
 
-        public virtual int Calc(List<Token> source)
+        public virtual decimal Calc(List<Token> source)
         {
             
             Stack<Token> temp = new Stack<Token>();
@@ -33,7 +33,7 @@ namespace ushoza.calc
             }
             if (temp.Count == 1)
             {
-                int rez = Convert.ToInt32(temp.Pop().Value);
+                decimal rez = Convert.ToDecimal(temp.Pop().Value);
                 return rez;
             }
             else
@@ -53,31 +53,31 @@ namespace ushoza.calc
             {
                 case "+":
                     {
-                        int r = Convert.ToInt32(op1.Value) + Convert.ToInt32(op2.Value);
+                        decimal r = Convert.ToDecimal(op1.Value) + Convert.ToDecimal(op2.Value);
                         temp.Push(new TokenOperand() { Value = r });
                         break;
                     }
                 case "-":
                     {
-                        int r = Convert.ToInt32(op1.Value) - Convert.ToInt32(op2.Value);
+                        decimal r = Convert.ToDecimal(op1.Value) - Convert.ToDecimal(op2.Value);
                         temp.Push(new TokenOperand() { Value = r });
                         break;
                     }
                 case "*":
                     {
-                        int r = Convert.ToInt32(op1.Value) * Convert.ToInt32(op2.Value);
+                        decimal r = Convert.ToDecimal(op1.Value) * Convert.ToDecimal(op2.Value);
                         temp.Push(new TokenOperand() { Value = r });
                         break;
                     }
                 case "/":
                     {
-                        int r = Convert.ToInt32(op1.Value) / Convert.ToInt32(op2.Value);
+                        decimal r = Convert.ToDecimal(op1.Value) / Convert.ToDecimal(op2.Value);
                         temp.Push(new TokenOperand() { Value = r });
                         break;
                     }
                 case "^":
                     {
-                        int r = (int)Math.Round(Math.Pow(Convert.ToInt32(op1.Value), Convert.ToInt32(op2.Value)), 0);
+                        decimal r = (int)Math.Round(Math.Pow(Convert.ToDouble(op1.Value), Convert.ToDouble(op2.Value)), 0);
                         temp.Push(new TokenOperand() { Value = r });
                         break;
                     }

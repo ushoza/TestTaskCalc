@@ -11,7 +11,8 @@ namespace ushoza.calc.test
     [TestFixture]
     public class TestAlu
     {
-             
+        string dec_sep = System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+
         [Test]
         public void TestCalSimpleExpression()
         {
@@ -20,8 +21,8 @@ namespace ushoza.calc.test
                                                      new TokenOperand() { Value = "2"}
                                                    };
             Alu alu = new Alu();
-            int actual = alu.Calc(source);
-            int expected = 4;
+            decimal actual = alu.Calc(source);
+            decimal expected = 4;
             Assert.AreEqual(expected, actual);
 
         }
@@ -29,9 +30,10 @@ namespace ushoza.calc.test
         [Test]
         public void TestCalSimpleExpressionDecimal()
         {
-            List<Token> source = new List<Token>() { new TokenOperand() { Value = "2.2"},
+            
+            List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"+dec_sep+"2"},
                                                      new TokenOperation () { Value ="+"},
-                                                     new TokenOperand() { Value = "2.3"}
+                                                     new TokenOperand() { Value = "2"+dec_sep+"3"}
                                                    };
             Alu alu = new Alu();
             decimal actual = alu.Calc(source);
@@ -51,8 +53,8 @@ namespace ushoza.calc.test
                                                      new TokenOperand() { Value = "8"},
                                                    };
             Alu alu = new Alu();
-            int actual = alu.Calc(source);
-            int expected = 26;
+            decimal actual = alu.Calc(source);
+            decimal expected = 26;
             Assert.AreEqual(expected, actual);
         }
        
@@ -170,8 +172,8 @@ namespace ushoza.calc.test
                                                      new TokenOperand() { Value = "8"},
                                                     };
             Alu alu = new Alu();
-            int actual = alu.Calc(source);
-            int expected = 40;
+            decimal actual = alu.Calc(source);
+            decimal expected = 40;
 
             Assert.AreEqual(expected, actual);
         }
@@ -193,8 +195,8 @@ namespace ushoza.calc.test
 
                                                     };
             Alu alu = new Alu();
-            int actual = alu.Calc(source);
-            int expected = 17;
+            decimal actual = alu.Calc(source);
+            decimal expected = 17;
 
             Assert.AreEqual(expected, actual);
         }

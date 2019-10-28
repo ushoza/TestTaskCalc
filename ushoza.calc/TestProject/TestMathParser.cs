@@ -44,6 +44,26 @@ namespace ushoza.calc.test
 
         }
 
+        [Test]
+       // [TestCase("2^3")]
+        public void MustBeReturnList2and1step3()
+        {
+            string expression = "2" + dec_sep +"1"+ "^3";
+            IList<Token> actual = parser.Parse(expression);
+            List<Token> expected = new List<Token>();
+            TokenOperand op1 = new TokenOperand();
+            op1.Value = "2" + dec_sep + "1";
+            TokenOperation oper = new TokenOperation();
+            oper.Value = "^";
+            TokenOperand op2 = new TokenOperand();
+            op2.Value = "3";
+            expected.Add(op1);
+            expected.Add(oper);
+            expected.Add(op2);
+            Assert.AreEqual(expected, actual);
+
+        }
+
         [TestCase("2^3+4-2")]
         public void MustBeReturnListTwoFreePlusFourMinusTwo(string expression)
         {

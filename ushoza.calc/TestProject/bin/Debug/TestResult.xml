@@ -1,52 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\TestProjectForFeatureVertInt.exe" total="48" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-10-28" time="10:47:59">
-  <environment nunit-version="2.5.10.11092" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug" machine-name="PYATAK" user="pyatak" user-domain="ASCON-CHEL" />
+<test-results name="D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\TestProjectForFeatureVertInt.exe" total="56" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-10-28" time="18:13:27">
+  <environment nunit-version="2.5.10.11092" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug" machine-name="PYATAK" user="pyatak" user-domain="ASCON-CHEL" />
   <culture-info current-culture="ru-RU" current-uiculture="ru-RU" />
-  <test-suite type="Assembly" name="D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\Шаблон тестового проекта Nunit для vs 2019\bin\Debug\TestProjectForFeatureVertInt.exe" executed="True" result="Success" success="True" time="12.974" asserts="0">
+  <test-suite type="Assembly" name="D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\bin\Debug\TestProjectForFeatureVertInt.exe" executed="True" result="Success" success="True" time="19.233" asserts="0">
     <results>
-      <test-suite type="Namespace" name="ushoza" executed="True" result="Success" success="True" time="12.966" asserts="0">
+      <test-suite type="Namespace" name="ushoza" executed="True" result="Success" success="True" time="19.223" asserts="0">
         <results>
-          <test-suite type="Namespace" name="calc" executed="True" result="Success" success="True" time="12.966" asserts="0">
+          <test-suite type="Namespace" name="calc" executed="True" result="Success" success="True" time="19.222" asserts="0">
             <results>
-              <test-suite type="Namespace" name="test" executed="True" result="Success" success="True" time="12.965" asserts="0">
+              <test-suite type="Namespace" name="test" executed="True" result="Success" success="True" time="19.222" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="TestAlu" executed="True" result="Success" success="True" time="4.442" asserts="0">
+                  <test-suite type="TestFixture" name="TestAlu" executed="True" result="Success" success="True" time="0.111" asserts="0">
                     <results>
-                      <test-case name="ushoza.calc.test.TestAlu.TestCalcComplexExpression" executed="True" result="Success" success="True" time="4.408" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestAlu.TestCalcComplexExpression" executed="True" result="Success" success="True" time="0.066" asserts="1" />
                       <test-case name="ushoza.calc.test.TestAlu.TestCalcSimpleWithBreakets" executed="True" result="Success" success="True" time="0.001" asserts="1" />
                       <test-case name="ushoza.calc.test.TestAlu.TestCalcSimpleWithBreakets2" executed="True" result="Success" success="True" time="0.001" asserts="1" />
                       <test-case name="ushoza.calc.test.TestAlu.TestCalSimpleExpression" executed="True" result="Success" success="True" time="0.001" asserts="1" />
-                      <test-case name="ushoza.calc.test.TestAlu.TestPolishNotation" executed="True" result="Success" success="True" time="0.005" asserts="1" />
-                      <test-case name="ushoza.calc.test.TestAlu.TestPolishNotation2" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestAlu.TestCalSimpleExpressionDecimal" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestAlu.TestPolishNotation" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestAlu.TestPolishNotation2" executed="True" result="Success" success="True" time="0.002" asserts="1" />
                       <test-case name="ushoza.calc.test.TestAlu.TestPolishNotation3" executed="True" result="Success" success="True" time="0.001" asserts="1" />
                       <test-case name="ushoza.calc.test.TestAlu.TestPolishNotationWithBreakets" executed="True" result="Success" success="True" time="0.001" asserts="1" />
                     </results>
                   </test-suite>
-                  <test-suite type="TestFixture" name="TestMathParser" executed="True" result="Success" success="True" time="4.664" asserts="0">
+                  <test-suite type="TestFixture" name="TestMathParser" executed="True" result="Success" success="True" time="15.696" asserts="0">
                     <results>
-                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenList" executed="True" result="Success" success="True" time="0.018" asserts="0">
+                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenList" executed="True" result="Success" success="True" time="0.023" asserts="0">
                         <results>
-                          <test-case name="ushoza.calc.test.TestMathParser.HasExpressionShouldBeTokenList(&quot;2+3&quot;,&quot;2&quot;,&quot;+&quot;,&quot;3&quot;)" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.HasExpressionShouldBeTokenList(&quot;2+3&quot;,&quot;2&quot;,&quot;+&quot;,&quot;3&quot;)" executed="True" result="Success" success="True" time="0.021" asserts="2" />
                           <test-case name="ushoza.calc.test.TestMathParser.HasExpressionShouldBeTokenList(&quot; 3 + 2 &quot;,&quot; 3 &quot;,&quot;+&quot;,&quot; 2 &quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenListWithBrackets" executed="True" result="Success" success="True" time="0.002" asserts="0">
-                        <results>
-                          <test-case name="ushoza.calc.test.TestMathParser.HasExpressionShouldBeTokenListWithBrackets(&quot;((2+3)*2-5)&quot;,&quot;(&quot;,&quot;(&quot;,&quot;2&quot;,&quot;+&quot;,&quot;3&quot;,&quot;)&quot;,&quot;*&quot;,&quot;2&quot;,&quot;-&quot;,&quot;5&quot;,&quot;)&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
-                        </results>
-                      </test-suite>
-                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenListWithBrackets" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenListWithBrackets" executed="True" result="Success" success="True" time="0.007" asserts="0">
                         <results>
                           <test-case name="ushoza.calc.test.TestMathParser.HasExpressionShouldBeTokenListWithBrackets(&quot;(1+2)*4+3&quot;,&quot;(&quot;,&quot;1&quot;,&quot;+&quot;,&quot;2&quot;,&quot;)&quot;,&quot;*&quot;,&quot;4&quot;,&quot;+&quot;,&quot;3&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-suite type="ParameterizedTest" name="MustBeReturnList2step3" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenListWithBrackets" executed="True" result="Success" success="True" time="0.002" asserts="0">
                         <results>
-                          <test-case name="ushoza.calc.test.TestMathParser.MustBeReturnList2step3(&quot;2^3&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.HasExpressionShouldBeTokenListWithBrackets(&quot;((2+3)*2-5)&quot;,&quot;(&quot;,&quot;(&quot;,&quot;2&quot;,&quot;+&quot;,&quot;3&quot;,&quot;)&quot;,&quot;*&quot;,&quot;2&quot;,&quot;-&quot;,&quot;5&quot;,&quot;)&quot;)" executed="True" result="Success" success="True" time="0.002" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-suite type="ParameterizedTest" name="MustBeReturnListTwoFreePlusFourMinusTwo" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                      <test-case name="ushoza.calc.test.TestMathParser.MustBeReturnList2and1step3" executed="True" result="Success" success="True" time="9.709" asserts="1" />
+                      <test-suite type="ParameterizedTest" name="MustBeReturnList2step3" executed="True" result="Success" success="True" time="1.276" asserts="0">
+                        <results>
+                          <test-case name="ushoza.calc.test.TestMathParser.MustBeReturnList2step3(&quot;2^3&quot;)" executed="True" result="Success" success="True" time="1.275" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="ParameterizedTest" name="MustBeReturnListTwoFreePlusFourMinusTwo" executed="True" result="Success" success="True" time="0.001" asserts="0">
                         <results>
                           <test-case name="ushoza.calc.test.TestMathParser.MustBeReturnListTwoFreePlusFourMinusTwo(&quot;2^3+4-2&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
                         </results>
@@ -56,26 +58,26 @@
                           <test-case name="ushoza.calc.test.TestMathParser.MustBeReturnListTwoFreePlusFourMinusTwoWithBrackets(&quot;2^(3+4-2)&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-suite type="ParameterizedTest" name="MustBeReturnRoof" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                      <test-suite type="ParameterizedTest" name="MustBeReturnRoof" executed="True" result="Success" success="True" time="0.001" asserts="0">
                         <results>
-                          <test-case name="ushoza.calc.test.TestMathParser.MustBeReturnRoof(&quot;^&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.MustBeReturnRoof(&quot;^&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-suite type="ParameterizedTest" name="ShouldBeBadSyntaxisException" executed="True" result="Success" success="True" time="4.623" asserts="0">
+                      <test-suite type="ParameterizedTest" name="ShouldBeBadSyntaxisException" executed="True" result="Success" success="True" time="4.648" asserts="0">
                         <results>
-                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2/&quot;)" executed="True" result="Success" success="True" time="1.491" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2++3&quot;)" executed="True" result="Success" success="True" time="0.653" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2 - / 4&quot;)" executed="True" result="Success" success="True" time="0.638" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2a / 4&quot;)" executed="True" result="Success" success="True" time="0.971" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2+3(4-5)&quot;)" executed="True" result="Success" success="True" time="0.866" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2/&quot;)" executed="True" result="Success" success="True" time="1.841" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2++3&quot;)" executed="True" result="Success" success="True" time="0.748" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2 - / 4&quot;)" executed="True" result="Success" success="True" time="0.609" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2a / 4&quot;)" executed="True" result="Success" success="True" time="0.699" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeBadSyntaxisException(&quot;2+3(4-5)&quot;)" executed="True" result="Success" success="True" time="0.750" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-suite type="ParameterizedTest" name="ShouldBeOperand" executed="True" result="Success" success="True" time="0.005" asserts="0">
+                      <test-suite type="ParameterizedTest" name="ShouldBeOperand" executed="True" result="Success" success="True" time="0.003" asserts="0">
                         <results>
-                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeOperand(&quot;7&quot;)" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeOperand(&quot;7&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
                           <test-case name="ushoza.calc.test.TestMathParser.ShouldBeOperand(&quot;23&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                           <test-case name="ushoza.calc.test.TestMathParser.ShouldBeOperand(&quot;10&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeOperand(&quot; 45&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestMathParser.ShouldBeOperand(&quot; 45&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                         </results>
                       </test-suite>
                       <test-suite type="ParameterizedTest" name="ShouldBeOperation" executed="True" result="Success" success="True" time="0.002" asserts="0">
@@ -86,20 +88,18 @@
                           <test-case name="ushoza.calc.test.TestMathParser.ShouldBeOperation(&quot;/&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-case name="ushoza.calc.test.TestMathParser.TestParser.ShouldBeEqual" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestMathParser.TestParser.HasExpressionShouldBeTokenListWithBracketsWithDecimal" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestMathParser.TestParser.ShouldBeEqual" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestMathParser.TestParser.ShouldBeOperandWitDecPlaces" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestMathParser.TestParser.ShouldBeOperandWitDecPlaces_WithWiteSpece" executed="True" result="Success" success="True" time="0.001" asserts="1" />
                     </results>
                   </test-suite>
-                  <test-suite type="TestFixture" name="TestParser" executed="True" result="Success" success="True" time="3.850" asserts="0">
+                  <test-suite type="TestFixture" name="TestParser" executed="True" result="Success" success="True" time="3.403" asserts="0">
                     <results>
                       <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenList" executed="True" result="Success" success="True" time="0.002" asserts="0">
                         <results>
-                          <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenList(&quot;2+3&quot;,&quot;2&quot;,&quot;+&quot;,&quot;3&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenList(&quot; 3 + 2 &quot;,&quot; 3 &quot;,&quot;+&quot;,&quot; 2 &quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                        </results>
-                      </test-suite>
-                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenListWithBrackets" executed="True" result="Success" success="True" time="0.000" asserts="0">
-                        <results>
-                          <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenListWithBrackets(&quot;(1+2)*4+3&quot;,&quot;(&quot;,&quot;1&quot;,&quot;+&quot;,&quot;2&quot;,&quot;)&quot;,&quot;*&quot;,&quot;4&quot;,&quot;+&quot;,&quot;3&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenList(&quot;2+3&quot;,&quot;2&quot;,&quot;+&quot;,&quot;3&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenList(&quot; 3 + 2 &quot;,&quot; 3 &quot;,&quot;+&quot;,&quot; 2 &quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
                         </results>
                       </test-suite>
                       <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenListWithBrackets" executed="True" result="Success" success="True" time="0.001" asserts="0">
@@ -107,24 +107,32 @@
                           <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenListWithBrackets(&quot;((2+3)*2-5)&quot;,&quot;(&quot;,&quot;(&quot;,&quot;2&quot;,&quot;+&quot;,&quot;3&quot;,&quot;)&quot;,&quot;*&quot;,&quot;2&quot;,&quot;-&quot;,&quot;5&quot;,&quot;)&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-suite type="ParameterizedTest" name="ShouldBeBadSyntaxisException" executed="True" result="Success" success="True" time="3.838" asserts="0">
+                      <test-suite type="ParameterizedTest" name="HasExpressionShouldBeTokenListWithBrackets" executed="True" result="Success" success="True" time="0.001" asserts="0">
                         <results>
-                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2/&quot;)" executed="True" result="Success" success="True" time="0.707" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2++3&quot;)" executed="True" result="Success" success="True" time="0.645" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2 - / 4&quot;)" executed="True" result="Success" success="True" time="0.608" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2a / 4&quot;)" executed="True" result="Success" success="True" time="1.041" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2+3(4-5)&quot;)" executed="True" result="Success" success="True" time="0.834" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenListWithBrackets(&quot;(1+2)*4+3&quot;,&quot;(&quot;,&quot;1&quot;,&quot;+&quot;,&quot;2&quot;,&quot;)&quot;,&quot;*&quot;,&quot;4&quot;,&quot;+&quot;,&quot;3&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                         </results>
                       </test-suite>
-                      <test-case name="ushoza.calc.test.TestParser.ShouldBeEqual" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                      <test-suite type="ParameterizedTest" name="ShouldBeOperand" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                      <test-case name="ushoza.calc.test.TestParser.HasExpressionShouldBeTokenListWithBracketsWithDecimal" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-suite type="ParameterizedTest" name="ShouldBeBadSyntaxisException" executed="True" result="Success" success="True" time="3.391" asserts="0">
+                        <results>
+                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2/&quot;)" executed="True" result="Success" success="True" time="0.674" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2++3&quot;)" executed="True" result="Success" success="True" time="0.633" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2 - / 4&quot;)" executed="True" result="Success" success="True" time="0.639" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2a / 4&quot;)" executed="True" result="Success" success="True" time="0.720" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.ShouldBeBadSyntaxisException(&quot;2+3(4-5)&quot;)" executed="True" result="Success" success="True" time="0.719" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-case name="ushoza.calc.test.TestParser.ShouldBeEqual" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                      <test-suite type="ParameterizedTest" name="ShouldBeOperand" executed="True" result="Success" success="True" time="0.002" asserts="0">
                         <results>
                           <test-case name="ushoza.calc.test.TestParser.ShouldBeOperand(&quot;7&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                           <test-case name="ushoza.calc.test.TestParser.ShouldBeOperand(&quot;23&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                          <test-case name="ushoza.calc.test.TestParser.ShouldBeOperand(&quot;10&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+                          <test-case name="ushoza.calc.test.TestParser.ShouldBeOperand(&quot;10&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                           <test-case name="ushoza.calc.test.TestParser.ShouldBeOperand(&quot; 45&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                         </results>
                       </test-suite>
+                      <test-case name="ushoza.calc.test.TestParser.ShouldBeOperandWitDecPlaces" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="ushoza.calc.test.TestParser.ShouldBeOperandWitDecPlaces_WithWiteSpece" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                       <test-suite type="ParameterizedTest" name="ShouldBeOperation" executed="True" result="Success" success="True" time="0.002" asserts="0">
                         <results>
                           <test-case name="ushoza.calc.test.TestParser.ShouldBeOperation(&quot;+&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />

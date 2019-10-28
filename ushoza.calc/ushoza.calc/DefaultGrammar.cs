@@ -12,6 +12,7 @@ namespace ushoza.calc
     {
         public virtual Token GetToken(string expression)
         {
+            string dec_sep = System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
             string expressionNew = expression.Replace(" ", "");
             TokenOperand  operand = new TokenOperand();
             operand.Value = "";
@@ -23,7 +24,7 @@ namespace ushoza.calc
             for (int i = 0; i < expressionNew.Length; i++)
             {
                 Char cCh = expressionNew[i];
-                if (Char.IsDigit(cCh))
+                if (Char.IsDigit(cCh) || cCh.ToString() == dec_sep)
                 {
                     operand.Value = String.Format("{0}{1}", operand.Value, cCh);
                 }

@@ -12,11 +12,13 @@ namespace ushoza.calc.test
     public class TestParser
     {
         protected  Parser parser;
+        protected string dec_sep = System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
 
         [SetUp]
         public virtual void Init()
         {
             parser = new Parser();
+            
         }
 
         [TestCase("7")]
@@ -30,6 +32,25 @@ namespace ushoza.calc.test
             TokenOperand operand = new TokenOperand() { Value = expression.Trim() };
             Assert.AreEqual(operand.Value, actualListToken[0].Value);
             
+        }
+
+        [Test]
+        public void ShouldBeOperandWitDecPlaces()
+        {
+            string expression = "7" + dec_sep + "3";
+            IList<Token> actualListToken = parser.Parse(expression);
+            TokenOperand operand = new TokenOperand() { Value = expression.Trim() };
+            Assert.AreEqual(operand.Value, actualListToken[0].Value);
+
+        }
+        [Test]
+        public void ShouldBeOperandWitDecPlaces_WithWiteSpece()
+        {
+             string expression = "7 " + dec_sep + " 3";
+            IList<Token> actualListToken = parser.Parse(expression);
+            TokenOperand operand = new TokenOperand() { Value = expression.Replace(" ", "") };
+            Assert.AreEqual(operand.Value, actualListToken[0].Value);
+
         }
         [TestCase("+")]
         [TestCase("-")]
@@ -119,5 +140,36 @@ namespace ushoza.calc.test
             expectedListToken.Add(new TokenOperand() { Value = op4.Trim().ToString() });
             Assert.AreEqual(expectedListToken, actualListToken);
         }
+
+        [Test]
+        //[TestCase("(1+2)*4+3", "(", "1", "+", "2", ")", "*", "4", "+", "3")]
+        public void HasExpressionShouldBeTokenListWithBracketsWithDecimal()
+        {
+            string expression = "(1" + dec_sep + "1" + "+2)*4+3" + dec_sep + "2";
+            string oBr1 = "(";
+            string op1 = "1" + dec_sep + "1";
+            string operPlus = "+";
+            string op2 = "2";
+            string clBr1 = ")";
+            string opeMult = "*";
+            string op3 = "4";
+            string operPlus2 = "+";
+            string op4 = "3" + dec_sep + "2";
+
+            IList<Token> actualListToken = parser.Parse(expression);
+            List<Token> expectedListToken = new List<Token>();
+            expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString(), isOpened = true });
+            expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
+            expectedListToken.Add(new TokenOperation() { Value = operPlus.Trim().ToString() });
+            expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
+            expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString(), isOpened = false });
+            expectedListToken.Add(new TokenOperation() { Value = opeMult.Trim().ToString() });
+            expectedListToken.Add(new TokenOperand() { Value = op3.Trim().ToString() });
+            expectedListToken.Add(new TokenOperation() { Value = operPlus2.Trim().ToString() });
+            expectedListToken.Add(new TokenOperand() { Value = op4.Trim().ToString() });
+            Assert.AreEqual(expectedListToken, actualListToken);
+        }
+
+
     }
 }
