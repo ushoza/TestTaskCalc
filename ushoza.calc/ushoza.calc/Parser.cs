@@ -7,7 +7,7 @@ using ushoza.calc.Exceptions;
 namespace ushoza.calc
 {
     /// <summary>
-    /// Разбирает строку выражения и преобразует в список Tokens
+    /// Простейший парсер, понимает только +-/*()
     /// </summary>
     public class Parser
     {
