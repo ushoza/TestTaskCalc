@@ -10,9 +10,13 @@ namespace ushoza.calc
     /// </summary>
     public class Token
     {
-        public object Value { get; set; }
-        
+        private object value;
+        public object Value
+        {
+            get { return value; }
+            set { this.value = value; }
 
+        }
         public override bool Equals(object obj)
         {
             bool isEqual = false;

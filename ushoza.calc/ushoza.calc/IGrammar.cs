@@ -8,7 +8,7 @@ namespace ushoza.calc
     /// <summary>
     /// Интерфейс парсера
     /// </summary>
-    public interface IScanner
+    public interface IGrammar
     {
         Token GetToken(string expression);
     }

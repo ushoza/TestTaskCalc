@@ -21,7 +21,7 @@ namespace ushoza.calc.test
         {
             IList<Token> actual = parser.Parse(expression);
             List<Token> expected = new List<Token>();
-            TokenOperation oper = new TokenOperation();
+            DafaultTokenOperation oper = new DafaultTokenOperation();
             oper.Value = "^";
             expected.Add(oper);
             Assert.AreEqual(expected, actual);
@@ -33,7 +33,7 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2";
-            TokenOperation oper = new TokenOperation();
+            DafaultTokenOperation oper = new DafaultTokenOperation();
             oper.Value = "^";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
@@ -53,7 +53,7 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2" + dec_sep + "1";
-            TokenOperation oper = new TokenOperation();
+            DafaultTokenOperation oper = new DafaultTokenOperation();
             oper.Value = "^";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
@@ -71,15 +71,15 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2";
-            TokenOperation oper = new TokenOperation();
+            DafaultTokenOperation oper = new DafaultTokenOperation();
             oper.Value = "^";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
-            TokenOperation op3 = new TokenOperation();
+            DafaultTokenOperation op3 = new DafaultTokenOperation();
             op3.Value = "+";
             TokenOperand op4 = new TokenOperand();
             op4.Value = "4";
-            TokenOperation op5 = new TokenOperation();
+            DafaultTokenOperation op5 = new DafaultTokenOperation();
             op5.Value = "-";
             TokenOperand op6 = new TokenOperand();
             op6.Value = "2";
@@ -101,18 +101,18 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2";
-            TokenOperation oper = new TokenOperation();
+            DafaultTokenOperation oper = new DafaultTokenOperation();
             oper.Value = "^";
             TokenBracket brOpen = new TokenBracket();
             brOpen.isOpened = true;
             brOpen.Value = "(";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
-            TokenOperation op3 = new TokenOperation();
+            DafaultTokenOperation op3 = new DafaultTokenOperation();
             op3.Value = "+";
             TokenOperand op4 = new TokenOperand();
             op4.Value = "4";
-            TokenOperation op5 = new TokenOperation();
+            DafaultTokenOperation op5 = new DafaultTokenOperation();
             op5.Value = "-";
             TokenOperand op6 = new TokenOperand();
             op6.Value = "2";

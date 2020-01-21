@@ -17,7 +17,7 @@ namespace ushoza.calc.test
         public void TestCalSimpleExpression()
         {
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new TokenOperation () { Value ="+"},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "2"}
                                                    };
             Alu alu = new Alu();
@@ -32,7 +32,7 @@ namespace ushoza.calc.test
         {
             
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"+dec_sep+"2"},
-                                                     new TokenOperation () { Value ="+"},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "2"+dec_sep+"3"}
                                                    };
             Alu alu = new Alu();
@@ -47,9 +47,9 @@ namespace ushoza.calc.test
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new TokenOperation () { Value ="+", Priority = 10},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenOperation() { Value = "*", Priority = 20},
+                                                     new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                    };
             Alu alu = new Alu();
@@ -63,10 +63,10 @@ namespace ushoza.calc.test
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new TokenOperation () { Value ="+", Priority = 10},
-                                                     new TokenOperation() { Value = "sin", Priority = 20},
+                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DafaultTokenOperation() { Value = "sin"},
                                                      new TokenOperand() { Value = "90"},
-                                                     new TokenOperation() { Value = "-", Priority = 10},
+                                                     new DafaultTokenOperation() { Value = "-"},
                                                      new TokenOperand() { Value = "1"}
                                                    };
             Alu alu = new Alu();
@@ -76,10 +76,10 @@ namespace ushoza.calc.test
             Queue<Token> expected = new Queue<Token>();
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "90" });
-            expected.Enqueue(new TokenOperation() { Value = "sin" });
-            expected.Enqueue(new TokenOperation() { Value = "+" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "sin" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
             expected.Enqueue(new TokenOperand() { Value = "1" });
-            expected.Enqueue(new TokenOperation() { Value = "-" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "-" });
             Assert.AreEqual(expected, actual);
         }
 
@@ -88,11 +88,11 @@ namespace ushoza.calc.test
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new TokenOperation () { Value ="+", Priority = 10},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenOperation() { Value = "*", Priority = 20},
+                                                     new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "90"},
-                                                     new TokenOperation() { Value = "-", Priority = 10},
+                                                     new DafaultTokenOperation() { Value = "-"},
                                                      new TokenOperand() { Value = "1"}
                                                    };
             Alu alu = new Alu();
@@ -103,10 +103,10 @@ namespace ushoza.calc.test
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
             expected.Enqueue(new TokenOperand() { Value = "90" });
-            expected.Enqueue(new TokenOperation() { Value = "*" });
-            expected.Enqueue(new TokenOperation() { Value = "+" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "*" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
             expected.Enqueue(new TokenOperand() { Value = "1" });
-            expected.Enqueue(new TokenOperation() { Value = "-" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "-" });
             Assert.AreEqual(expected, actual);
         }
 
@@ -115,9 +115,9 @@ namespace ushoza.calc.test
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new TokenOperation () { Value ="+", Priority = 10},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenOperation() { Value = "*", Priority = 20},
+                                                     new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
             Alu alu = new Alu();
@@ -128,8 +128,8 @@ namespace ushoza.calc.test
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
             expected.Enqueue(new TokenOperand() { Value = "8" });
-            expected.Enqueue(new TokenOperation() { Value = "*" });
-            expected.Enqueue(new TokenOperation() { Value = "+" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "*" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
             Assert.AreEqual(expected, actual);
         }
 
@@ -137,12 +137,12 @@ namespace ushoza.calc.test
         public void TestPolishNotationWithBreakets()
         {
 
-            List<Token> source = new List<Token>() { new TokenBracket() { Value = "(", isOpened = true, Priority = 5},
+            List<Token> source = new List<Token>() { new TokenBracket() { Value = "(", isOpened = true},
                                                      new TokenOperand() { Value = "2"},
-                                                     new TokenOperation () { Value ="+", Priority = 10},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenBracket() { Value = ")", isOpened = false, Priority = 5},
-                                                     new TokenOperation() { Value = "*", Priority = 20},
+                                                     new TokenBracket() { Value = ")", isOpened = false},
+                                                     new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
             Alu alu = new Alu();
@@ -152,9 +152,9 @@ namespace ushoza.calc.test
             Queue<Token> expected = new Queue<Token>();
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
-            expected.Enqueue(new TokenOperation() { Value = "+" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
             expected.Enqueue(new TokenOperand() { Value = "8" });
-            expected.Enqueue(new TokenOperation() { Value = "*" });
+            expected.Enqueue(new DafaultTokenOperation() { Value = "*" });
             
             Assert.AreEqual(expected, actual);
         }
@@ -163,12 +163,12 @@ namespace ushoza.calc.test
         public void TestCalcSimpleWithBreakets()
         {
 
-            List<Token> source = new List<Token>() { new TokenBracket() { Value = "(", isOpened = true, Priority = 5},
+            List<Token> source = new List<Token>() { new TokenBracket() { Value = "(", isOpened = true},
                                                      new TokenOperand() { Value = "2"},
-                                                     new TokenOperation () { Value ="+", Priority = 10},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenBracket() { Value = ")", isOpened = false, Priority = 5},
-                                                     new TokenOperation() { Value = "*", Priority = 20},
+                                                     new TokenBracket() { Value = ")", isOpened = false},
+                                                     new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
             Alu alu = new Alu();
@@ -184,14 +184,14 @@ namespace ushoza.calc.test
 
             List<Token> source = new List<Token>() {
                                                      new TokenOperand(){ Value = "3"},
-                                                     new TokenOperation(){ Value = "+", Priority = 10},
+                                                     new DafaultTokenOperation(){ Value = "+"},
                                                      new TokenOperand(){ Value = "2"},
-                                                     new TokenOperation(){ Value = "*", Priority = 20},
-                                                     new TokenBracket() { Value = "(", isOpened = true, Priority = 5},
+                                                     new DafaultTokenOperation(){ Value = "*"},
+                                                     new TokenBracket() { Value = "(", isOpened = true},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenOperation () { Value ="+", Priority = 10},
+                                                     new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "4"},
-                                                     new TokenBracket() { Value = ")", isOpened = false, Priority = 5},
+                                                     new TokenBracket() { Value = ")", isOpened = false},
 
                                                     };
             Alu alu = new Alu();

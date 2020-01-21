@@ -3,15 +3,15 @@
   <Class Name="ushoza.calc.Token">
     <Position X="1" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAAAgAAAAAAA=</HashCode>
       <FileName>Token.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ushoza.calc.Parser">
+  <Class Name="ushoza.calc.DefaultParser">
     <Position X="6" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Parser.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DefaultParser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ushoza.calc.TokenOperand">
@@ -21,17 +21,17 @@
       <FileName>TokenOperand.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ushoza.calc.TokenOperation">
+  <Class Name="ushoza.calc.DafaultTokenOperation">
     <Position X="3.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAgBAAACAA=</HashCode>
       <FileName>TokenOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ushoza.calc.DefaultGrammar">
     <Position X="8.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAQAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DefaultGrammar.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -39,7 +39,7 @@
   <Class Name="ushoza.calc.MathGrammar">
     <Position X="8.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MathGrammar.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -51,24 +51,46 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ushoza.calc.Alu">
-    <Position X="10.5" Y="1.5" Width="2" />
+    <Position X="14.5" Y="1.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Alu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ushoza.calc.TokenBracket">
-    <Position X="3.5" Y="5" Width="1.5" />
+    <Position X="1" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TokenBracket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ushoza.calc.DafaultValidator">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DafaultValidator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ushoza.calc.MathTokenOperation">
+    <Position X="3.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>MathTokenOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="ushoza.calc.IScanner">
     <Position X="8.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IScanner.cs</FileName>
+      <FileName>IGrammar.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ushoza.calc.ITokensValidator">
+    <Position X="10.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITokensValidator.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

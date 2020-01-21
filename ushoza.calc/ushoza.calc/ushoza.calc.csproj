@@ -50,13 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alu.cs" />
+    <Compile Include="DafaultValidator.cs" />
     <Compile Include="DefaultGrammar.cs" />
     <Compile Include="Exceptions\CalcBadSyntaxException.cs" />
     <Compile Include="Exceptions\CalcException.cs" />
-    <Compile Include="IScanner.cs" />
+    <Compile Include="IGrammar.cs" />
+    <Compile Include="ITokensValidator.cs" />
     <Compile Include="MathGrammar.cs" />
     <Compile Include="MathParser.cs" />
-    <Compile Include="Parser.cs" />
+    <Compile Include="DefaultParser.cs" />
+    <Compile Include="MathTokenOperation.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="TokenBracket.cs" />
     <Compile Include="TokenOperand.cs" />

@@ -5,21 +5,39 @@ using System.Text;
 
 namespace ushoza.calc
 {
-    public class TokenOperation : Token
+    public class DafaultTokenOperation : Token
     {
-        //private object val;
-        //public object Value
-        //{
-        //    get { return val; }
-        //    set
-        //    {
-        //        val = value;
+        private object value;
+        public new object Value
+        {
+            get { return value; }
+            set 
+            { 
+                this.value = value;
+                SetPriority();
+            }
 
-        //    }
-        //}
-        public int Priority { get;  set; }
+        }
+        public int Priority { get;  protected set; }
         public TokenOperand Op1 { get; set; }
         public TokenOperand Op2 { get; set; }
-        
-    }
+
+        protected virtual void SetPriority()
+        {
+            switch (this.Value)
+            {
+                case "+":
+                case "-":
+                    this.Priority = 10;
+                    break;
+                case "*":
+                case "/":
+                    this.Priority = 20;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        }
 }

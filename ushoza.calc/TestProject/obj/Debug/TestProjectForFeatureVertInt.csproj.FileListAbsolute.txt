@@ -100,7 +100,6 @@ D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\Interop.Vertical.dll
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\Interop.XMLClasses.dll
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.csproj.ResolveComReference.cache
-D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.csproj.CoreCompileInputs.cache
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.csproj.CopyComplete
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.exe
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\TestProject\obj\Debug\TestProjectForFeatureVertInt.pdb

@@ -8,7 +8,7 @@ namespace ushoza.calc
     /// <summary>
     /// Грамматика для простейшего парсера математических выражений
     /// </summary>
-    public class DefaultGrammar : IScanner
+    public class DefaultGrammar : IGrammar
     {
         public virtual Token GetToken(string expression)
         {
@@ -16,11 +16,10 @@ namespace ushoza.calc
             string expressionNew = expression.Replace(" ", "");
             TokenOperand  operand = new TokenOperand();
             operand.Value = "";
-            TokenOperation operation = new TokenOperation();
+            DafaultTokenOperation operation = new DafaultTokenOperation();
             operation.Value = "";
             TokenBracket tokenBracket = new TokenBracket();
             tokenBracket.Value = "";           
-            string tempToken = "";
             for (int i = 0; i < expressionNew.Length; i++)
             {
                 Char cCh = expressionNew[i];
@@ -62,9 +61,9 @@ namespace ushoza.calc
                 }
             }
 
-            if (operation.Value != "" )
+            if (operation.Value != "")
             {
-                SetOperationPriority(operation);
+                //SetOperationPriority(operation);
                 return operation;
             }
             if (operand.Value != "")
@@ -74,7 +73,7 @@ namespace ushoza.calc
             }
             if (tokenBracket.Value != "")
             {
-                SetOperationPriority(tokenBracket);
+                //SetOperationPriority(tokenBracket);
                 return tokenBracket;
             }
             else
@@ -88,26 +87,6 @@ namespace ushoza.calc
             return cCh == '+' || cCh == '-' || cCh == '*' || cCh == '/' || cCh == '(' || cCh == ')';
         }
 
-        protected virtual void SetOperationPriority(TokenOperation oper)
-        {
-            switch (oper.Value)
-            {
-                case "+":
-                case "-":
-                    oper.Priority = 10;
-                    break;
-                case "*":
-                case "/":
-                    oper.Priority = 20;
-                    break;
-                case "(":
-                case ")":
-                    oper.Priority = 5;
-                    break;
-                default:
-                    break;
-            }
-        }
 
     }
 }

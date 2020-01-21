@@ -8,9 +8,9 @@ namespace ushoza.calc
     /// <summary>
     /// Парсер математических выражения, понимает возведение в степень ^
     /// </summary>
-    public class MathParser : Parser
+    public class MathParser : DefaultParser
     {
-        public override IScanner CreateGrammar()
+        public override IGrammar CreateGrammar()
         {
             return new MathGrammar();
         }

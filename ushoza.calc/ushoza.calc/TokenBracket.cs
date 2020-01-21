@@ -8,21 +8,12 @@ namespace ushoza.calc
     /// <summary>
     /// Элемент скобка
     /// </summary>
-    public class TokenBracket : TokenOperation
+    public class TokenBracket : Token
     {
-        //private object val;
-        //public object Value
-        //{
-        //    get { return val; }
-        //    set
-        //    {
-        //        val = value;
-        //        Priority = 5;
-        //    }
-        //}
         /// <summary>
         /// это открывающаяся скобка?
         /// </summary>
         public bool isOpened { get; set; }
+        
     }
 }

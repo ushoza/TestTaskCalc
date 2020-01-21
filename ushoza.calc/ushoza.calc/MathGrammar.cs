@@ -19,12 +19,6 @@ namespace ushoza.calc
                 return base.CheckEligibleOperation(cCh);
         }
 
-        protected override void SetOperationPriority(TokenOperation oper)
-        {
-            if (oper.Value == "^")
-                oper.Priority = 20;
-            else
-                base.SetOperationPriority(oper);    
-        }
+       
     }
 }

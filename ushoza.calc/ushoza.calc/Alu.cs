@@ -27,7 +27,7 @@ namespace ushoza.calc
                 }
                 else
                 {
-                    TokenOperation operation = polNotation.Dequeue() as TokenOperation;
+                    DafaultTokenOperation operation = polNotation.Dequeue() as DafaultTokenOperation;
                     ExecuteOperation(temp, operation);
                 }
             }
@@ -45,7 +45,7 @@ namespace ushoza.calc
 
         }
 
-        public virtual void ExecuteOperation(Stack<Token> temp, TokenOperation operation)
+        public virtual void ExecuteOperation(Stack<Token> temp, DafaultTokenOperation operation)
         {
             TokenOperand op2 = temp.Pop() as TokenOperand;
             TokenOperand op1 = temp.Pop() as TokenOperand;
@@ -113,22 +113,22 @@ namespace ushoza.calc
                     }
                 }
 
-                if (token is TokenOperation && !(token is TokenBracket))
+                if (token is DafaultTokenOperation && !(token is TokenBracket))
                 {
                     if (temp.Count != 0)
                     {
-                        TokenOperation operTop = temp.Peek() as TokenOperation;
-                        if (operTop.Priority < (token as TokenOperation).Priority)
+                        DafaultTokenOperation operTop = temp.Peek() as DafaultTokenOperation;
+                        if (operTop.Priority < (token as DafaultTokenOperation).Priority)
                         {
                             temp.Push(token);
                         }
                         else
                         {
-                            TokenOperation oper = temp.Pop() as TokenOperation;
+                            DafaultTokenOperation oper = temp.Pop() as DafaultTokenOperation;
                             rezult.Enqueue(oper);
-                            while (temp.Count != 0 && (temp.Peek() as TokenOperation).Priority >= (token as TokenOperation).Priority)
+                            while (temp.Count != 0 && (temp.Peek() as DafaultTokenOperation).Priority >= (token as DafaultTokenOperation).Priority)
                             {
-                                oper = temp.Pop() as TokenOperation;
+                                oper = temp.Pop() as DafaultTokenOperation;
                                 rezult.Enqueue(oper);
                             }
                             temp.Push(token);
@@ -137,7 +137,7 @@ namespace ushoza.calc
 
                     else
                     {
-                        TokenOperation operTop2 = token as TokenOperation;
+                        DafaultTokenOperation operTop2 = token as DafaultTokenOperation;
                         temp.Push(operTop2);
                     }
                 }
@@ -146,7 +146,7 @@ namespace ushoza.calc
             }
             while (temp.Count !=0)
             {
-                TokenOperation oper = temp.Pop() as TokenOperation;
+                DafaultTokenOperation oper = temp.Pop() as DafaultTokenOperation;
                 rezult.Enqueue(oper);
             }
         }
