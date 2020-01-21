@@ -11,7 +11,7 @@ namespace ushoza.calc
     public class Token
     {
         private object value;
-        public object Value
+        public virtual object Value
         {
             get { return value; }
             set { this.value = value; }

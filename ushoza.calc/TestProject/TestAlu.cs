@@ -20,7 +20,7 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "2"}
                                                    };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             decimal actual = alu.Calc(source);
             decimal expected = 4;
             Assert.AreEqual(expected, actual);
@@ -35,7 +35,7 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "2"+dec_sep+"3"}
                                                    };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             decimal actual = alu.Calc(source);
             decimal expected = 4.5M;
             Assert.AreEqual(expected, actual);
@@ -52,39 +52,16 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                    };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             decimal actual = alu.Calc(source);
             decimal expected = 26;
             Assert.AreEqual(expected, actual);
         }
        
-        [Test]
-        public void TestPolishNotation()
-        {
-
-            List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
-                                                     new DafaultTokenOperation() { Value = "sin"},
-                                                     new TokenOperand() { Value = "90"},
-                                                     new DafaultTokenOperation() { Value = "-"},
-                                                     new TokenOperand() { Value = "1"}
-                                                   };
-            Alu alu = new Alu();
-            Stack<Token> temp = new Stack<Token>();
-            Queue<Token> actual = new Queue<Token>();
-            alu.GetPolishNotation(source, temp, actual);
-            Queue<Token> expected = new Queue<Token>();
-            expected.Enqueue(new TokenOperand() { Value = "2" });
-            expected.Enqueue(new TokenOperand() { Value = "90" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "sin" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
-            expected.Enqueue(new TokenOperand() { Value = "1" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "-" });
-            Assert.AreEqual(expected, actual);
-        }
+        
 
         [Test]
-        public void TestPolishNotation2()
+        public void TestPolishNotationSimple2Plus3Mult90Minus1()
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
@@ -95,10 +72,10 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation() { Value = "-"},
                                                      new TokenOperand() { Value = "1"}
                                                    };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             Stack<Token> temp = new Stack<Token>();
-            Queue<Token> actual = new Queue<Token>();
-            alu.GetPolishNotation(source, temp, actual);
+            DefaultPolNotationConverter converter = new DefaultPolNotationConverter();
+            Queue<Token> actual = converter.Convert(source);
             Queue<Token> expected = new Queue<Token>();
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
@@ -111,7 +88,7 @@ namespace ushoza.calc.test
         }
 
         [Test]
-        public void TestPolishNotation3()
+        public void TestPolishNotation2plus3Mult8()
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
@@ -120,10 +97,10 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             Stack<Token> temp = new Stack<Token>();
-            Queue<Token> actual = new Queue<Token>();
-            alu.GetPolishNotation(source, temp, actual);
+            DefaultPolNotationConverter converter = new DefaultPolNotationConverter();
+            Queue<Token> actual = converter.Convert(source);
             Queue<Token> expected = new Queue<Token>();
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
@@ -145,10 +122,10 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             Stack<Token> temp = new Stack<Token>();
-            Queue<Token> actual = new Queue<Token>();
-            alu.GetPolishNotation(source, temp, actual);
+            DefaultPolNotationConverter converter = new DefaultPolNotationConverter();
+            Queue<Token> actual = converter.Convert(source);
             Queue<Token> expected = new Queue<Token>();
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
@@ -171,7 +148,7 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             decimal actual = alu.Calc(source);
             decimal expected = 40;
 
@@ -194,7 +171,7 @@ namespace ushoza.calc.test
                                                      new TokenBracket() { Value = ")", isOpened = false},
 
                                                     };
-            Alu alu = new Alu();
+            DefaultAlu alu = new DefaultAlu();
             decimal actual = alu.Calc(source);
             decimal expected = 17;
 

@@ -8,7 +8,7 @@ namespace ushoza.calc
     public class DafaultTokenOperation : Token
     {
         private object value;
-        public new object Value
+        public override object Value
         {
             get { return value; }
             set 

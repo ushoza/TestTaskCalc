@@ -50,10 +50,10 @@
       <FileName>MathParser.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ushoza.calc.Alu">
+  <Class Name="ushoza.calc.DefaultAlu">
     <Position X="14.5" Y="1.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BAAAAgAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Alu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -79,7 +79,15 @@
       <FileName>MathTokenOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="ushoza.calc.IScanner">
+  <Class Name="ushoza.calc.DefaultPolNotationConverter">
+    <Position X="14.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DefaultPolNotationConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ushoza.calc.IGrammar">
     <Position X="8.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -91,6 +99,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITokensValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ushoza.calc.IConverter">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IConverter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

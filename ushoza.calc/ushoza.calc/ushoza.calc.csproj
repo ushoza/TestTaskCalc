@@ -52,8 +52,10 @@
     <Compile Include="Alu.cs" />
     <Compile Include="DafaultValidator.cs" />
     <Compile Include="DefaultGrammar.cs" />
+    <Compile Include="DefaultPolNotationConverter.cs" />
     <Compile Include="Exceptions\CalcBadSyntaxException.cs" />
     <Compile Include="Exceptions\CalcException.cs" />
+    <Compile Include="IConverter.cs" />
     <Compile Include="IGrammar.cs" />
     <Compile Include="ITokensValidator.cs" />
     <Compile Include="MathGrammar.cs" />
