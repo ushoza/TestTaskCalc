@@ -13,7 +13,9 @@ namespace ushoza.calc.test
         [SetUp]
         public override void Init()
         {
-            parser = new MathParser();
+            IGrammar grammar = new MathGrammar();
+            ITokensValidator validator = new DefaultValidator();
+            parser = new DefaultParser(grammar, validator);
         }
 
         [TestCase("^")]

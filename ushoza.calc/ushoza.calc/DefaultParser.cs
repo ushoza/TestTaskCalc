@@ -11,19 +11,27 @@ namespace ushoza.calc
     /// </summary>
     public class DefaultParser
     {
-        public virtual IGrammar CreateGrammar()
-        {
-            return new DefaultGrammar();
-        }
+        //public virtual IGrammar CreateGrammar()
+        //{
+        //    return new DefaultGrammar();
+        //}
 
-        public virtual ITokensValidator CreateValidator()
+        //public virtual ITokensValidator CreateValidator()
+        //{
+        //    return new DafaultValidator();
+        //}
+        private IGrammar grammar;
+        private ITokensValidator validator;
+
+
+        public DefaultParser(IGrammar grammar, ITokensValidator validator)
         {
-            return new DafaultValidator();
+            this.grammar = grammar;
+            this.validator = validator;
         }
-         
         public List<Token> Parse(string expression)
         {
-            IGrammar grammar = CreateGrammar();
+            
             List<Token> listToken = new List<Token>();
             expression = expression.Replace(" ", "");
             while (expression != "")
@@ -33,7 +41,6 @@ namespace ushoza.calc
                 expression = expression.Remove(0, forstToken.Value.ToString().Length);
 
             }
-            ITokensValidator validator = CreateValidator();
             validator.Validate(listToken);
             return listToken;
 

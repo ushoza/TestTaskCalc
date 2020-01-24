@@ -10,7 +10,7 @@
   <Class Name="ushoza.calc.DefaultParser">
     <Position X="6" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAAA=</HashCode>
       <FileName>DefaultParser.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -37,17 +37,10 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ushoza.calc.MathGrammar">
-    <Position X="8.25" Y="4.75" Width="1.5" />
+    <Position X="8.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MathGrammar.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ushoza.calc.MathParser">
-    <Position X="6" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MathParser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ushoza.calc.DefaultAlu">
@@ -64,7 +57,7 @@
       <FileName>TokenBracket.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ushoza.calc.DafaultValidator">
+  <Class Name="ushoza.calc.DefaultValidator">
     <Position X="10.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

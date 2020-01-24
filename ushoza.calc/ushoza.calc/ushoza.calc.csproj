@@ -59,7 +59,6 @@
     <Compile Include="IGrammar.cs" />
     <Compile Include="ITokensValidator.cs" />
     <Compile Include="MathGrammar.cs" />
-    <Compile Include="MathParser.cs" />
     <Compile Include="DefaultParser.cs" />
     <Compile Include="MathTokenOperation.cs" />
     <Compile Include="Token.cs" />

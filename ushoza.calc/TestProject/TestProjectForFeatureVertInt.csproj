@@ -67,6 +67,7 @@
     <Compile Include="TestAlu.cs" />
     <Compile Include="TestMathParser.cs" />
     <Compile Include="TestParser.cs" />
+    <Compile Include="TestValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

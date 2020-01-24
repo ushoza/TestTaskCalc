@@ -6,7 +6,7 @@ using ushoza.calc.Exceptions;
 
 namespace ushoza.calc
 {
-    public class DafaultValidator : ITokensValidator
+    public class DefaultValidator : ITokensValidator
     {
         public void Validate(List<Token> tokens)
         {

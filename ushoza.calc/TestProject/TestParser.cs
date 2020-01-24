@@ -17,7 +17,9 @@ namespace ushoza.calc.test
         [SetUp]
         public virtual void Init()
         {
-            parser = new DefaultParser();
+            IGrammar grammar = new DefaultGrammar();
+            ITokensValidator validator = new DefaultValidator();
+            parser = new DefaultParser(grammar, validator);
             
         }
 
