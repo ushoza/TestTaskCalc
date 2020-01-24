@@ -29,7 +29,7 @@ namespace ushoza.calc
                 }
                 else
                 {
-                    DafaultTokenOperation operation = polNotation.Dequeue() as DafaultTokenOperation;
+                    DefaultTokenOperation operation = polNotation.Dequeue() as DefaultTokenOperation;
                     ExecuteOperation(temp, operation);
                 }
             }
@@ -47,7 +47,7 @@ namespace ushoza.calc
 
         }
 
-        public virtual void ExecuteOperation(Stack<Token> temp, DafaultTokenOperation operation)
+        public virtual void ExecuteOperation(Stack<Token> temp, DefaultTokenOperation operation)
         {
             TokenOperand op2 = temp.Pop() as TokenOperand;
             TokenOperand op1 = temp.Pop() as TokenOperand;

@@ -18,7 +18,7 @@ namespace ushoza.calc
                 {
                     throw new CalcBadSyntaxException();
                 }
-                if (token is DafaultTokenOperation && nextToken is DafaultTokenOperation)
+                if (token is DefaultTokenOperation && nextToken is DefaultTokenOperation)
                 {
                     if ((token.Value.ToString() != "(" && token.Value.ToString() != ")") && (nextToken.Value.ToString() != "(" && nextToken.Value.ToString() != ")"))
                     {
@@ -28,7 +28,7 @@ namespace ushoza.calc
                 }
                 if (token is TokenOperand && nextToken is TokenBracket && (nextToken as TokenBracket).isOpened)
                     throw new CalcBadSyntaxException();
-                if (tokens.Last() is DafaultTokenOperation && !(tokens.Last() is TokenBracket))
+                if (tokens.Last() is DefaultTokenOperation && !(tokens.Last() is TokenBracket))
                 {
                     throw new CalcBadSyntaxException();
                 }

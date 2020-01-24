@@ -62,7 +62,7 @@ namespace ushoza.calc.test
         {
             
             IList<Token> actualListToken = parser.Parse(expression);
-            DafaultTokenOperation expectedTokenOperation = new DafaultTokenOperation() { Value = expression.Trim() };
+            DefaultTokenOperation expectedTokenOperation = new DefaultTokenOperation() { Value = expression.Trim() };
             Assert.AreEqual(expectedTokenOperation, actualListToken[0]);
         }
         [TestCase("2+3", "2", "+", "3")]
@@ -73,7 +73,7 @@ namespace ushoza.calc.test
             IList<Token> actualListToken = parser.Parse(expression);
             List<Token> expectedListToken = new List<Token>();
             expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = operation.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = operation.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
             Assert.AreEqual(expectedListToken, actualListToken);
         }
@@ -113,12 +113,12 @@ namespace ushoza.calc.test
             expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString() });
             expectedListToken.Add(new TokenBracket() { Value = oBr2.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = operPlus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
             expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString()});
-            expectedListToken.Add(new DafaultTokenOperation() { Value = opeMult.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = opeMult.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op3.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = operMinus.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = operMinus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op4.Trim().ToString() });
             expectedListToken.Add(new TokenBracket() { Value = clBr2.Trim().ToString() });
             Assert.AreEqual(expectedListToken, actualListToken);
@@ -133,12 +133,12 @@ namespace ushoza.calc.test
             List<Token> expectedListToken = new List<Token>();
             expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = operPlus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
             expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = opeMult.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = opeMult.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op3.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus2.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = operPlus2.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op4.Trim().ToString() });
             Assert.AreEqual(expectedListToken, actualListToken);
         }
@@ -162,12 +162,12 @@ namespace ushoza.calc.test
             List<Token> expectedListToken = new List<Token>();
             expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = operPlus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
             expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = opeMult.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = opeMult.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op3.Trim().ToString() });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus2.Trim().ToString() });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = operPlus2.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op4.Trim().ToString() });
             Assert.AreEqual(expectedListToken, actualListToken);
         }
@@ -179,9 +179,9 @@ namespace ushoza.calc.test
             string expression = "-3+8*4";
             List<Token> expectedListToken = new List<Token>();
             expectedListToken.Add(new TokenOperand() {Value=-3 });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = "+" });
             expectedListToken.Add(new TokenOperand() { Value = 8 });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = "*" });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = "*" });
             expectedListToken.Add(new TokenOperand() { Value = 4 });
             List<Token> actualListToken = parser.Parse(expression);
             Assert.AreEqual(expectedListToken, actualListToken);
@@ -193,14 +193,14 @@ namespace ushoza.calc.test
             string expression = "-3+8*4+(-5+9)";
             List<Token> expectedListToken = new List<Token>();
             expectedListToken.Add(new TokenOperand() { Value = -3 });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = "+" });
             expectedListToken.Add(new TokenOperand() { Value = 8 });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = "*" });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = "*" });
             expectedListToken.Add(new TokenOperand() { Value = 4 });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = "+" });
             expectedListToken.Add(new TokenBracket() { Value = "("});
             expectedListToken.Add(new TokenOperand() { Value = -5 });
-            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new DefaultTokenOperation() { Value = "+" });
             expectedListToken.Add(new TokenOperand() { Value = 9 });
             expectedListToken.Add(new TokenBracket() { Value = ")" });
             List<Token> actualListToken = parser.Parse(expression);

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ushoza.calc
 {
-    public class DafaultTokenOperation : Token
+    public class DefaultTokenOperation : Token
     {
         private object value;
         public override object Value

@@ -5,14 +5,14 @@ using System.Text;
 
 namespace ushoza.calc
 {
-    public class MathTokenOperation : DafaultTokenOperation
+    public class MathTokenOperation : DefaultTokenOperation
     {
         protected override void SetPriority()
         {
             
             if(Value == "^")
             {
-                this.Priority = 20;
+                this.Priority = 30;
             }
             else
             {

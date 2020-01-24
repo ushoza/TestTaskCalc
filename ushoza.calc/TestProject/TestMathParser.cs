@@ -23,7 +23,7 @@ namespace ushoza.calc.test
         {
             IList<Token> actual = parser.Parse(expression);
             List<Token> expected = new List<Token>();
-            DafaultTokenOperation oper = new DafaultTokenOperation();
+            DefaultTokenOperation oper = new DefaultTokenOperation();
             oper.Value = "^";
             expected.Add(oper);
             Assert.AreEqual(expected, actual);
@@ -35,7 +35,7 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2";
-            DafaultTokenOperation oper = new DafaultTokenOperation();
+            DefaultTokenOperation oper = new DefaultTokenOperation();
             oper.Value = "^";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
@@ -55,7 +55,7 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2" + dec_sep + "1";
-            DafaultTokenOperation oper = new DafaultTokenOperation();
+            DefaultTokenOperation oper = new DefaultTokenOperation();
             oper.Value = "^";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
@@ -73,15 +73,15 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2";
-            DafaultTokenOperation oper = new DafaultTokenOperation();
+            DefaultTokenOperation oper = new DefaultTokenOperation();
             oper.Value = "^";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
-            DafaultTokenOperation op3 = new DafaultTokenOperation();
+            DefaultTokenOperation op3 = new DefaultTokenOperation();
             op3.Value = "+";
             TokenOperand op4 = new TokenOperand();
             op4.Value = "4";
-            DafaultTokenOperation op5 = new DafaultTokenOperation();
+            DefaultTokenOperation op5 = new DefaultTokenOperation();
             op5.Value = "-";
             TokenOperand op6 = new TokenOperand();
             op6.Value = "2";
@@ -103,18 +103,18 @@ namespace ushoza.calc.test
             List<Token> expected = new List<Token>();
             TokenOperand op1 = new TokenOperand();
             op1.Value = "2";
-            DafaultTokenOperation oper = new DafaultTokenOperation();
+            DefaultTokenOperation oper = new DefaultTokenOperation();
             oper.Value = "^";
             TokenBracket brOpen = new TokenBracket();
            // brOpen.isOpened = true;
             brOpen.Value = "(";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
-            DafaultTokenOperation op3 = new DafaultTokenOperation();
+            DefaultTokenOperation op3 = new DefaultTokenOperation();
             op3.Value = "+";
             TokenOperand op4 = new TokenOperand();
             op4.Value = "4";
-            DafaultTokenOperation op5 = new DafaultTokenOperation();
+            DefaultTokenOperation op5 = new DefaultTokenOperation();
             op5.Value = "-";
             TokenOperand op6 = new TokenOperand();
             op6.Value = "2";
@@ -130,6 +130,30 @@ namespace ushoza.calc.test
             expected.Add(op5);
             expected.Add(op6);
             expected.Add(brClose);
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestCase("6/2^2")]
+        public void MustBeReturnList6dev2exp2(string expression)
+        {
+            IList<Token> actual = parser.Parse(expression);
+            List<Token> expected = new List<Token>();
+            TokenOperand op1 = new TokenOperand();
+            op1.Value = "6";
+            DefaultTokenOperation oper = new DefaultTokenOperation();
+            oper.Value = "/";
+            TokenOperand op2 = new TokenOperand();
+            op2.Value = "2";
+            DefaultTokenOperation op3 = new DefaultTokenOperation();
+            op3.Value = "^";
+            TokenOperand op4 = new TokenOperand();
+            op4.Value = "2";
+            expected.Add(op1);
+            expected.Add(oper);
+            expected.Add(op2);
+            expected.Add(op3);
+            expected.Add(op4);
             Assert.AreEqual(expected, actual);
 
         }

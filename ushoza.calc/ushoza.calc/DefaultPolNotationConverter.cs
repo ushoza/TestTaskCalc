@@ -36,22 +36,23 @@ namespace ushoza.calc
                     }
                 }
 
-                if (token is DafaultTokenOperation && !(token is TokenBracket))
+                if (token is DefaultTokenOperation && !(token is TokenBracket))
                 {
                     if (temp.Count != 0)
                     {
-                        DafaultTokenOperation operTop = temp.Peek() as DafaultTokenOperation;
-                        if (temp.Peek() is TokenBracket || operTop.Priority < (token as DafaultTokenOperation).Priority)
+                        DefaultTokenOperation operTop = temp.Peek() as DefaultTokenOperation;
+                        if (temp.Peek() is TokenBracket || operTop.Priority < (token as DefaultTokenOperation).Priority)
                         {
                             temp.Push(token);
                         }
                         else
                         {
-                            DafaultTokenOperation oper = temp.Pop() as DafaultTokenOperation;
+                            DefaultTokenOperation oper = temp.Pop() as DefaultTokenOperation;
                             result.Enqueue(oper);
-                            while (temp.Count != 0 && (temp.Peek() as DafaultTokenOperation).Priority >= (token as DafaultTokenOperation).Priority)
+                            while (temp.Count != 0 && !(temp.Peek() is TokenBracket) && (temp.Peek() as DefaultTokenOperation).Priority >= (token as DefaultTokenOperation).Priority)
+                                                        
                             {
-                                oper = temp.Pop() as DafaultTokenOperation;
+                                oper = temp.Pop() as DefaultTokenOperation;
                                 result.Enqueue(oper);
                             }
                             temp.Push(token);
@@ -60,7 +61,7 @@ namespace ushoza.calc
 
                     else
                     {
-                        DafaultTokenOperation operTop2 = token as DafaultTokenOperation;
+                        DefaultTokenOperation operTop2 = token as DefaultTokenOperation;
                         temp.Push(operTop2);
                     }
                 }
@@ -69,7 +70,7 @@ namespace ushoza.calc
             }
             while (temp.Count != 0)
             {
-                DafaultTokenOperation oper = temp.Pop() as DafaultTokenOperation;
+                DefaultTokenOperation oper = temp.Pop() as DefaultTokenOperation;
                 result.Enqueue(oper);
             }
             return result;

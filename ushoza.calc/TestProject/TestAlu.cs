@@ -17,7 +17,7 @@ namespace ushoza.calc.test
         public void TestCalSimpleExpression()
         {
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "2"}
                                                    };
             DefaultAlu alu = new DefaultAlu();
@@ -32,7 +32,7 @@ namespace ushoza.calc.test
         {
             
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"+dec_sep+"2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "2"+dec_sep+"3"}
                                                    };
             DefaultAlu alu = new DefaultAlu();
@@ -47,9 +47,9 @@ namespace ushoza.calc.test
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new DafaultTokenOperation() { Value = "*"},
+                                                     new DefaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                    };
             DefaultAlu alu = new DefaultAlu();
@@ -65,11 +65,11 @@ namespace ushoza.calc.test
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new DafaultTokenOperation() { Value = "*"},
+                                                     new DefaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "90"},
-                                                     new DafaultTokenOperation() { Value = "-"},
+                                                     new DefaultTokenOperation() { Value = "-"},
                                                      new TokenOperand() { Value = "1"}
                                                    };
             DefaultAlu alu = new DefaultAlu();
@@ -80,10 +80,10 @@ namespace ushoza.calc.test
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
             expected.Enqueue(new TokenOperand() { Value = "90" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "*" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "*" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "+" });
             expected.Enqueue(new TokenOperand() { Value = "1" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "-" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "-" });
             Assert.AreEqual(expected, actual);
         }
 
@@ -92,9 +92,9 @@ namespace ushoza.calc.test
         {
 
             List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new DafaultTokenOperation() { Value = "*"},
+                                                     new DefaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
             DefaultAlu alu = new DefaultAlu();
@@ -105,8 +105,8 @@ namespace ushoza.calc.test
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
             expected.Enqueue(new TokenOperand() { Value = "8" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "*" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "*" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "+" });
             Assert.AreEqual(expected, actual);
         }
 
@@ -116,10 +116,10 @@ namespace ushoza.calc.test
 
             List<Token> source = new List<Token>() { new TokenBracket() { Value = "("},
                                                      new TokenOperand() { Value = "2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
                                                      new TokenBracket() { Value = ")"},
-                                                     new DafaultTokenOperation() { Value = "*"},
+                                                     new DefaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
             DefaultAlu alu = new DefaultAlu();
@@ -129,9 +129,9 @@ namespace ushoza.calc.test
             Queue<Token> expected = new Queue<Token>();
             expected.Enqueue(new TokenOperand() { Value = "2" });
             expected.Enqueue(new TokenOperand() { Value = "3" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "+" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "+" });
             expected.Enqueue(new TokenOperand() { Value = "8" });
-            expected.Enqueue(new DafaultTokenOperation() { Value = "*" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "*" });
             
             Assert.AreEqual(expected, actual);
         }
@@ -142,10 +142,10 @@ namespace ushoza.calc.test
 
             List<Token> source = new List<Token>() { new TokenBracket() { Value = "("},
                                                      new TokenOperand() { Value = "2"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
                                                      new TokenBracket() { Value = ")"},
-                                                     new DafaultTokenOperation() { Value = "*"},
+                                                     new DefaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
             DefaultAlu alu = new DefaultAlu();
@@ -161,12 +161,12 @@ namespace ushoza.calc.test
 
             List<Token> source = new List<Token>() {
                                                      new TokenOperand(){ Value = "3"},
-                                                     new DafaultTokenOperation(){ Value = "+"},
+                                                     new DefaultTokenOperation(){ Value = "+"},
                                                      new TokenOperand(){ Value = "2"},
-                                                     new DafaultTokenOperation(){ Value = "*"},
+                                                     new DefaultTokenOperation(){ Value = "*"},
                                                      new TokenBracket() { Value = "("},
                                                      new TokenOperand() { Value = "3"},
-                                                     new DafaultTokenOperation () { Value ="+"},
+                                                     new DefaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "4"},
                                                      new TokenBracket() { Value = ")"},
 
@@ -175,6 +175,102 @@ namespace ushoza.calc.test
             decimal actual = alu.Calc(source);
             decimal expected = 17;
 
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void TestCalcExpressionWithExpMustbe1and5()
+        {
+
+            List<Token> source = new List<Token>() { new TokenOperand() { Value = "6"},
+                                                     new DefaultTokenOperation () { Value ="/"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new MathTokenOperation() { Value = "^"},
+                                                     new TokenOperand() { Value = "2"},
+                                                   };
+            DefaultAlu alu = new DefaultAlu();
+            decimal actual = alu.Calc(source);
+            decimal expected = 1.5M;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void TestCalcExpressionWithExpMustbe274()
+        {
+
+            List<Token> source = new List<Token>() { new TokenOperand() { Value = "6"},
+                                                     new DefaultTokenOperation () { Value ="+"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new MathTokenOperation() { Value = "^"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new DefaultTokenOperation () { Value ="*"},
+                                                     new TokenBracket(){ Value = "("},
+                                                     new TokenOperand() { Value = "8"},
+                                                     new MathTokenOperation() { Value = "^"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new DefaultTokenOperation () { Value ="+"},
+                                                     new TokenOperand() { Value = "3"},
+                                                     new TokenBracket(){ Value = ")"}
+                                                   };
+            DefaultAlu alu = new DefaultAlu();
+            decimal actual = alu.Calc(source);
+            decimal expected = 274;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void TestCalcExpressionMustbe198()
+        {
+
+            List<Token> source = new List<Token>() { new TokenOperand() { Value = "6"},
+                                                     new DefaultTokenOperation () { Value ="+"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new DefaultTokenOperation() { Value = "*"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new DefaultTokenOperation () { Value ="*"},
+                                                     new TokenBracket(){ Value = "("},
+                                                     new TokenOperand() { Value = "8"},
+                                                     new DefaultTokenOperation() { Value = "*"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new DefaultTokenOperation () { Value ="+"},
+                                                     new TokenOperand() { Value = "3"},
+                                                     new TokenBracket(){ Value = ")"}
+                                                   };
+            DefaultAlu alu = new DefaultAlu();
+            decimal actual = alu.Calc(source);
+            decimal expected = 82;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void TestPolishNotationWithBreaketsBrecketsInTheMiddle()
+        {
+
+            List<Token> source = new List<Token>() { new TokenOperand() { Value = "2"},
+                                                     new MathTokenOperation () { Value ="^"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new DefaultTokenOperation() { Value = "*"},
+                                                     new TokenBracket(){ Value = "("},
+                                                     new TokenOperand() { Value = "8"},
+                                                     new MathTokenOperation() { Value = "^"},
+                                                     new TokenOperand() { Value = "2"},
+                                                     new DefaultTokenOperation () { Value ="+"},
+                                                     new TokenOperand() { Value = "3"},
+                                                     new TokenBracket(){ Value = ")"}
+                                                   };
+            DefaultAlu alu = new DefaultAlu();
+            DefaultPolNotationConverter converter = new DefaultPolNotationConverter();
+            Queue<Token> actual = converter.Convert(source);
+            Queue<Token> expected = new Queue<Token>();
+            expected.Enqueue(new TokenOperand() { Value = "2" });
+            expected.Enqueue(new TokenOperand() { Value = "2" });
+            expected.Enqueue(new MathTokenOperation() { Value = "^" });
+            expected.Enqueue(new TokenOperand() { Value = "8" });
+            expected.Enqueue(new TokenOperand() { Value = "2" });
+            expected.Enqueue(new MathTokenOperation() { Value = "^" });
+            expected.Enqueue(new TokenOperand() { Value = "3" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "+" });
+            expected.Enqueue(new DefaultTokenOperation() { Value = "*" });
             Assert.AreEqual(expected, actual);
         }
     }
