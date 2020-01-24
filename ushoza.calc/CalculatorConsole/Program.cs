@@ -18,7 +18,7 @@ namespace ushoza.calc
                     Console.WriteLine("Введите выражение:");
                     string forCalc = Console.ReadLine();
                     DefaultAlu alu = new DefaultAlu();
-                    MathParser mathParser = new MathParser();
+                    DefaultParser mathParser = new MathParser();
                     List<Token> tokens = mathParser.Parse(forCalc);
                     Console.WriteLine("Результат: " + alu.Calc(tokens));
                 }

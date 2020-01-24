@@ -273,5 +273,35 @@ namespace ushoza.calc.test
             expected.Enqueue(new DefaultTokenOperation() { Value = "*" });
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void TestSimpleNegativeExpression()
+        {
+            string sourceStr = "-3+2*(2-1)";
+            IGrammar grammar = new MathGrammar();
+            ITokensValidator validator = new DefaultValidator();
+            DefaultParser parser = new DefaultParser(grammar, validator);
+            List<Token> source = parser.Parse(sourceStr);
+            DefaultAlu defaultAlu = new DefaultAlu();
+            decimal actual = defaultAlu.Calc(source);
+            decimal expected = -1M;
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [Test]
+        public void TestSimpleNegativeExpressionLong()
+        {
+            string sourceStr = "-3/2-4+(-5/2)";
+            IGrammar grammar = new MathGrammar();
+            ITokensValidator validator = new DefaultValidator();
+            DefaultParser parser = new DefaultParser(grammar, validator);
+            List<Token> source = parser.Parse(sourceStr);
+            DefaultAlu defaultAlu = new DefaultAlu();
+            decimal actual = defaultAlu.Calc(source);
+            decimal expected = -8M;
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }

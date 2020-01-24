@@ -10,6 +10,8 @@ namespace ushoza.calc
     {
         public void Validate(List<Token> tokens)
         {
+            if (tokens.Count == 1 && tokens[0] is DefaultTokenOperation)
+                throw new CalcBadSyntaxException();
             for (int i = 0; i < tokens.Count - 1; i++)
             {
                 Token token = tokens[i];

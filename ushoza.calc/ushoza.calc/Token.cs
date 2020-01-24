@@ -42,5 +42,7 @@ namespace ushoza.calc
 
            return isEqual;
         }
+
+        
     }
 }

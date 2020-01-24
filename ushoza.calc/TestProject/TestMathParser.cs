@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ushoza.calc.Exceptions;
 
 namespace ushoza.calc.test
 {
@@ -19,14 +20,9 @@ namespace ushoza.calc.test
         }
 
         [TestCase("^")]
-        public void MustBeReturnRoof(string expression)
+        public void MustBeReturnCalcBadSyntaxRxception(string expression)
         {
-            IList<Token> actual = parser.Parse(expression);
-            List<Token> expected = new List<Token>();
-            DefaultTokenOperation oper = new DefaultTokenOperation();
-            oper.Value = "^";
-            expected.Add(oper);
-            Assert.AreEqual(expected, actual);
+            Assert.Throws<CalcBadSyntaxException>(() => parser.Parse(expression));
         }
         [TestCase("2^3")]
             public void MustBeReturnList2step3(string expression)
