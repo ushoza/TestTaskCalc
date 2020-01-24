@@ -106,7 +106,7 @@ namespace ushoza.calc.test
             DafaultTokenOperation oper = new DafaultTokenOperation();
             oper.Value = "^";
             TokenBracket brOpen = new TokenBracket();
-            brOpen.isOpened = true;
+           // brOpen.isOpened = true;
             brOpen.Value = "(";
             TokenOperand op2 = new TokenOperand();
             op2.Value = "3";
@@ -119,7 +119,7 @@ namespace ushoza.calc.test
             TokenOperand op6 = new TokenOperand();
             op6.Value = "2";
             TokenBracket brClose = new TokenBracket();
-            brOpen.isOpened = false;
+            //brOpen.isOpened = false;
             brClose.Value = ")";
             expected.Add(op1);
             expected.Add(oper);

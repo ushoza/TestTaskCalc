@@ -110,17 +110,17 @@ namespace ushoza.calc.test
 
             IList<Token> actualListToken = parser.Parse(expression);
             List<Token> expectedListToken = new List<Token>();
-            expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString(), isOpened = true });
-            expectedListToken.Add(new TokenBracket() { Value = oBr2.Trim().ToString(), isOpened = true });
+            expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString() });
+            expectedListToken.Add(new TokenBracket() { Value = oBr2.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
-            expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString(), isOpened = false });
+            expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString()});
             expectedListToken.Add(new DafaultTokenOperation() { Value = opeMult.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op3.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = operMinus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op4.Trim().ToString() });
-            expectedListToken.Add(new TokenBracket() { Value = clBr2.Trim().ToString(), isOpened = false });
+            expectedListToken.Add(new TokenBracket() { Value = clBr2.Trim().ToString() });
             Assert.AreEqual(expectedListToken, actualListToken);
         }
 
@@ -131,11 +131,11 @@ namespace ushoza.calc.test
 
             IList<Token> actualListToken = parser.Parse(expression);
             List<Token> expectedListToken = new List<Token>();
-            expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString(), isOpened = true });
+            expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
-            expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString(), isOpened = false });
+            expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = opeMult.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op3.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus2.Trim().ToString() });
@@ -160,11 +160,11 @@ namespace ushoza.calc.test
 
             IList<Token> actualListToken = parser.Parse(expression);
             List<Token> expectedListToken = new List<Token>();
-            expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString(), isOpened = true });
+            expectedListToken.Add(new TokenBracket() { Value = oBr1.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op1.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op2.Trim().ToString() });
-            expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString(), isOpened = false });
+            expectedListToken.Add(new TokenBracket() { Value = clBr1.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = opeMult.Trim().ToString() });
             expectedListToken.Add(new TokenOperand() { Value = op3.Trim().ToString() });
             expectedListToken.Add(new DafaultTokenOperation() { Value = operPlus2.Trim().ToString() });
@@ -172,6 +172,39 @@ namespace ushoza.calc.test
             Assert.AreEqual(expectedListToken, actualListToken);
         }
 
+        //[TestCase("-3+8*4", "-", "3","+","8", "*", "4")]
+        [Test]
+        public void ShouldBeTokenListWithNegativeNumbersSimple()
+        {
+            string expression = "-3+8*4";
+            List<Token> expectedListToken = new List<Token>();
+            expectedListToken.Add(new TokenOperand() {Value=-3 });
+            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new TokenOperand() { Value = 8 });
+            expectedListToken.Add(new DafaultTokenOperation() { Value = "*" });
+            expectedListToken.Add(new TokenOperand() { Value = 4 });
+            List<Token> actualListToken = parser.Parse(expression);
+            Assert.AreEqual(expectedListToken, actualListToken);
+        }
 
+        [Test]
+        public void ShouldBeTokenListWithNegativeNumbersAndBrackets()
+        {
+            string expression = "-3+8*4+(-5+9)";
+            List<Token> expectedListToken = new List<Token>();
+            expectedListToken.Add(new TokenOperand() { Value = -3 });
+            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new TokenOperand() { Value = 8 });
+            expectedListToken.Add(new DafaultTokenOperation() { Value = "*" });
+            expectedListToken.Add(new TokenOperand() { Value = 4 });
+            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new TokenBracket() { Value = "("});
+            expectedListToken.Add(new TokenOperand() { Value = -5 });
+            expectedListToken.Add(new DafaultTokenOperation() { Value = "+" });
+            expectedListToken.Add(new TokenOperand() { Value = 9 });
+            expectedListToken.Add(new TokenBracket() { Value = ")" });
+            List<Token> actualListToken = parser.Parse(expression);
+            Assert.AreEqual(expectedListToken, actualListToken);
+        }
     }
 }

@@ -10,10 +10,24 @@ namespace ushoza.calc
     /// </summary>
     public class TokenBracket : Token
     {
+        private object value;
+        public override object Value
+        {
+            get { return value; }
+            set
+            {
+                this.value = value;
+                if (this.value.ToString() == "(")
+                    isOpened = true;
+                else
+                    isOpened = false;
+            }
+
+        }
         /// <summary>
         /// это открывающаяся скобка?
         /// </summary>
-        public bool isOpened { get; set; }
+        public bool isOpened { get; private set; }
         
     }
 }

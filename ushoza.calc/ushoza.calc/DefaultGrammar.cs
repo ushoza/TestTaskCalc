@@ -37,13 +37,13 @@ namespace ushoza.calc
                         }
                         if (cCh == '(')
                         {
-                            tokenBracket.isOpened = true;
+                            //tokenBracket.isOpened = true;
                             tokenBracket.Value = String.Format("{0}", cCh);
                             break;
                         }
                         if (cCh == ')')
                         {
-                            tokenBracket.isOpened = false;
+                           // tokenBracket.isOpened = false;
                             tokenBracket.Value = String.Format("{0}", cCh);
                             break;
                         }

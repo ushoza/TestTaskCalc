@@ -114,11 +114,11 @@ namespace ushoza.calc.test
         public void TestPolishNotationWithBreakets()
         {
 
-            List<Token> source = new List<Token>() { new TokenBracket() { Value = "(", isOpened = true},
+            List<Token> source = new List<Token>() { new TokenBracket() { Value = "("},
                                                      new TokenOperand() { Value = "2"},
                                                      new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenBracket() { Value = ")", isOpened = false},
+                                                     new TokenBracket() { Value = ")"},
                                                      new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
@@ -140,11 +140,11 @@ namespace ushoza.calc.test
         public void TestCalcSimpleWithBreakets()
         {
 
-            List<Token> source = new List<Token>() { new TokenBracket() { Value = "(", isOpened = true},
+            List<Token> source = new List<Token>() { new TokenBracket() { Value = "("},
                                                      new TokenOperand() { Value = "2"},
                                                      new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "3"},
-                                                     new TokenBracket() { Value = ")", isOpened = false},
+                                                     new TokenBracket() { Value = ")"},
                                                      new DafaultTokenOperation() { Value = "*"},
                                                      new TokenOperand() { Value = "8"},
                                                     };
@@ -164,11 +164,11 @@ namespace ushoza.calc.test
                                                      new DafaultTokenOperation(){ Value = "+"},
                                                      new TokenOperand(){ Value = "2"},
                                                      new DafaultTokenOperation(){ Value = "*"},
-                                                     new TokenBracket() { Value = "(", isOpened = true},
+                                                     new TokenBracket() { Value = "("},
                                                      new TokenOperand() { Value = "3"},
                                                      new DafaultTokenOperation () { Value ="+"},
                                                      new TokenOperand() { Value = "4"},
-                                                     new TokenBracket() { Value = ")", isOpened = false},
+                                                     new TokenBracket() { Value = ")"},
 
                                                     };
             DefaultAlu alu = new DefaultAlu();
