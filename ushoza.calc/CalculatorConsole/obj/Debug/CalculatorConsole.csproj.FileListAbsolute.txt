@@ -22,7 +22,6 @@ D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\bin
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\bin\Debug\ushoza.calc.dll
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\bin\Debug\ushoza.calc.pdb
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\obj\Debug\CalculatorConsole.csprojAssemblyReference.cache
-D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\obj\Debug\CalculatorConsole.csproj.CoreCompileInputs.cache
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\obj\Debug\CalculatorConsole.csproj.CopyComplete
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\obj\Debug\CalculatorConsole.exe
 D:\WORK\GITHUB\TestTaskCalculator\TestTaskCalc\ushoza.calc\CalculatorConsole\obj\Debug\CalculatorConsole.pdb

@@ -16,7 +16,7 @@ namespace ushoza.calc
             string expressionNew = expression.Replace(" ", "");
             TokenOperand  operand = new TokenOperand();
             operand.Value = "";
-            DefaultTokenOperation operation = new DefaultTokenOperation();
+            DefaultTokenOperation operation = new MathTokenOperation();
             operation.Value = "";
             TokenBracket tokenBracket = new TokenBracket();
             tokenBracket.Value = "";           

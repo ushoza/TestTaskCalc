@@ -303,5 +303,20 @@ namespace ushoza.calc.test
             Assert.AreEqual(expected, actual);
 
         }
+
+        [Test]
+        public void TestMathCalc()
+        {
+            string sourceStr = "2^3*5";
+            IGrammar grammar = new MathGrammar();
+            ITokensValidator validator = new DefaultValidator();
+            DefaultParser parser = new DefaultParser(grammar, validator);
+            List<Token> source = parser.Parse(sourceStr);
+            DefaultAlu defaultAlu = new DefaultAlu();
+            decimal actual = defaultAlu.Calc(source);
+            decimal expected = 40;
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }

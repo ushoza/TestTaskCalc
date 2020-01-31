@@ -10,7 +10,7 @@ namespace ushoza.calc
         protected override void SetPriority()
         {
             
-            if(Value == "^")
+            if(Value.ToString() == "^")
             {
                 this.Priority = 30;
             }
